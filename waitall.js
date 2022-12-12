@@ -2,6 +2,8 @@
         return new Promise(resolve => {
             if (document.querySelector(selector)) {
                 return resolve(document.querySelector(selector));
+            } else {
+                return resolve(null);
             }
 
             const observer = new MutationObserver(mutations => {
