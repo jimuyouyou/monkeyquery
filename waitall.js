@@ -83,11 +83,15 @@
         const board = document.querySelector('#mmcopyBoard');
 
         if (!board) {
+            const wrapDiv = document.createElement('div');
+            wrapDiv.id = 'wrappermmcopyBoard';
+            wrapDiv.style = 'position:absolute;background:blue;width:800px';
             const boardDiv = document.createElement('div');
             boardDiv.id = 'mmcopyBoard';
-            boardDiv.style = 'position:relative';
-            boardDiv.onmousedown='mydragg.startMoving(this,"mmcopyBoard",event);';
-            boardDiv.onmouseup='mydragg.stopMoving("mmcopyBoard");'
+            boardDiv.style = 'position:absolute;background:green;user-select: none;padding:10px;';
+            boardDiv.onmousedown = function(){mydragg.startMoving(this,"wrappermmcopyBoard",event);}
+            boardDiv.onmouseup = function(){mydragg.stopMoving("wrappermmcopyBoard");}
+            wrapDiv.appendChild(boardDiv);
 
             Object.keys(props).forEach((prop) => {
                 const button = document.createElement('button');
@@ -99,7 +103,7 @@
                 boardDiv.appendChild(button);
             });
 
-            document.body.appendChild(boardDiv);
+            document.body.appendChild(wrapDiv);
         }
     }
 
