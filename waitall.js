@@ -85,10 +85,10 @@
         if (!board) {
             const wrapDiv = document.createElement('div');
             wrapDiv.id = 'wrappermmcopyBoard';
-            wrapDiv.style = 'position:absolute;background:blue;width:800px;left:50px;top:50px;z-index:9999;';
+            wrapDiv.style = 'position:absolute;background:blue;width:90%;left:50px;top:50px;z-index:9999;';
             const boardDiv = document.createElement('div');
             boardDiv.id = 'mmcopyBoard';
-            boardDiv.style = 'position:absolute;background:green;user-select: none;padding:10px;';
+            boardDiv.style = 'position:absolute;background:green;user-select: none;padding:10px;width:100%;';
             boardDiv.onmousedown = function(){mydragg.startMoving(this,"wrappermmcopyBoard",event);}
             boardDiv.onmouseup = function(){mydragg.stopMoving("wrappermmcopyBoard");}
             wrapDiv.appendChild(boardDiv);
