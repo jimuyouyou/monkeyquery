@@ -91,6 +91,7 @@
             boardDiv.style = 'position:absolute;background:green;user-select: none;padding:10px;width:100%;';
             boardDiv.onmousedown = function(){mydragg.startMoving(this,"wrappermmcopyBoard",event);}
             boardDiv.onmouseup = function(){mydragg.stopMoving("wrappermmcopyBoard");}
+            boardDiv.ondbclick = function(){boardDiv.style.display = 'none';};
             wrapDiv.appendChild(boardDiv);
 
             Object.keys(props).forEach((prop) => {
