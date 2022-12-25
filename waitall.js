@@ -85,7 +85,7 @@
         if (!board) {
             const wrapDiv = document.createElement('div');
             wrapDiv.id = 'wrappermmcopyBoard';
-            wrapDiv.style = 'position:absolute;background:blue;width:90%;left:50px;top:50px;z-index:9999;';
+            wrapDiv.style = 'position:fixed;background:blue;width:90%;left:50px;top:50px;z-index:9999;';
             const boardDiv = document.createElement('div');
             boardDiv.id = 'mmcopyBoard';
             boardDiv.style = 'position:absolute;background:green;user-select: none;padding:10px;width:100%;';
@@ -96,7 +96,7 @@
             Object.keys(props).forEach((prop) => {
                 const button = document.createElement('button');
                 button.innerHTML = prop;
-                button.style = 'margin:5px;color:blue;';
+                button.style = 'margin:5px !important;color:blue !important;padding 2px !important;border:2px solid green !important;min-width:auto !important;min-height: auto !important;scale:1 !important;width:auto !important;height:auto !important;';
                 button.onclick = function(){
                     copyTextToClipboard(props[prop]);
                 };
