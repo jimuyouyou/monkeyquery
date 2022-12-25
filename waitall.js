@@ -96,7 +96,7 @@
             Object.keys(props).forEach((prop) => {
                 const button = document.createElement('button');
                 button.innerHTML = prop;
-                button.style = 'margin:5px !important;color:blue !important;padding 2px !important;border:2px solid green !important;min-width:auto !important;min-height: auto !important;scale:1 !important;width:auto !important;height:auto !important;';
+                button.style = 'cursor:pointer;margin:5px !important;color:blue !important;padding 2px !important;border:2px solid green !important;min-width:auto !important;min-height: auto !important;scale:1 !important;width:auto !important;height:auto !important;';
                 button.onclick = function(){
                     copyTextToClipboard(props[prop]);
                 };
